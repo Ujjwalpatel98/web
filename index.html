@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Ujjwal Patel</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container" id="home">
+                <div class="hero-pic">
+                    <img src="web image.jpg" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Web Developer</span></h5>
+                    <h1>Ujjwal Patel</h1>
+                    <p> I'm a computer science student with a passion for coding and problem-solving. 
+                        I enjoy exploring algorithms, software development, and data structures. 
+                        My goal is to leverage my skills to make a meaningful impact in the tech industry.
+                    </p>
+                    <div class="btn-group">
+                       <a href="#" class="btn active">Hire me</a>
+                       <a href="#" class="btn">Contact</a>
+                    </div>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+    <section id="about" class="about-section">
+        <div class="wrapper">
+            <h2>About Me</h2>
+            <p>
+                I am a computer science student pursuing a Bachelor's in Computer Applications from Garden City University. I am particularly interested in areas such as software development, data structures, algorithms, and database management.
+            </p>
+            <div class="education">
+                <h3>Education</h3>
+                <ul>
+                    <li>
+                        <strong>Bachelor of Computer Applications</strong><br>
+                        Garden City University<br>
+                        <em>Expected Graduation: 2025</em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="certifications" class="certifications-section">
+        <div class="wrapper">
+            <h2>Certifications</h2>
+            <div class="cert-toggle">
+                <button class="toggle-cert-btn">View Certifications</button>
+                <p>Gained expertise in these areas to  enhance my ability .
+                    These certifications demonstrate my commitment to continuous learning and professional development.</p>
+                <div class="cert-list">
+                    <ul>
+                        <li>Cyber Security Essentials by IBM</li>
+                        <li>Python to Interact with OS by GOOGLE</li>
+                        <li>Teamwork Skills by University of Colorado Boulder</li>
+                        <li>Operating System by GOOGLE</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="resume" class="resume-section">
+        <div class="wrapper">
+            <h2>My Resume</h2>
+            <p>Here's my resume. Let's work together and collaborate on projects!</p>
+            <a href="ujlu resume.pdf" class="btn resume-btn" target="_blank" download>Download Resume</a>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <div class="wrapper">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p><i class="fa-solid fa-phone"></i> Phone: +91 9827184208</p>
+                <p><i class="fa-brands fa-twitter"></i> Twitter: Ujjwalpatel98 </p>
+                <p><i class="fa-solid fa-envelope"></i> Email: Ujjwalpatel9341@gmail.com</p>
+                <p><i class="fa-brands fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/ujjwal-patel-ab2529273/" target="_blank">yourprofile</a></p>
+            </div>
+            <h3>Get in Touch</h3>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function() {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        var typed = new Typed(".input", {
+            strings: ["Web Developer"],
+            typedSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+
+        const toggleCertBtn = document.querySelector('.toggle-cert-btn');
+        const certList = document.querySelector('.cert-list');
+        
+        toggleCertBtn.addEventListener('click', function() {
+            certList.style.display = certList.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+</body>
+</html>
